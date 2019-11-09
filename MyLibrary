@@ -1,4 +1,4 @@
-'''Created by Themanninblack'''
+'''Created by Themanninblack with help from online sources and Reddit'''
 import spotipy
 import spotipy.util as util
 import sys
