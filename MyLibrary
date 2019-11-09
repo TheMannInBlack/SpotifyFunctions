@@ -16,7 +16,7 @@ def Liked_Songs():
     
     token = util.prompt_for_user_token(username, scope = scope, client_id = client_id, client_secret = client_secret, redirect_uri = redirect_uri)
     sp = spotipy.Spotify(auth=token)
-    df = pd.DataFrame(columns = ('Title', 'artists'))
+    df = pd.DataFrame(columns = ('Title', 'Artists'))
     T = []
     A = []
     for i in Offset:
