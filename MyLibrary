@@ -5,7 +5,7 @@ import sys
 import pandas as pd
 import numpy as np
 
-Offset = np.arange(0,1000, 51).tolist()
+Offset = np.arange(0,1000, 50).tolist()
 
 def Liked_Songs():
     username = 'username'
