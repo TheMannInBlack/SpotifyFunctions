@@ -4,6 +4,9 @@ import spotipy.util as util
 import sys
 import pandas as pd
 import numpy as np
+from datetime import date
+
+today = str(date.today())
 
 Offset = np.arange(0,1000, 50).tolist()
 
@@ -29,7 +32,7 @@ def Liked_Songs():
                 A.append(track['artists'][0]['name'])
     df['Title'] = T
     df['Artists'] = A
-    df.to_csv('Finally.csv') 
+    df.to_csv(today + 'SpotifyLikedSongs.csv') 
 Liked_Songs()
 
 
