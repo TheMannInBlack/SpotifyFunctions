@@ -17,22 +17,27 @@ def Liked_Songs():
     redirect_uri = 'http://localhost:8888/callback'
     scope = 'user-library-read'
     
-    token = util.prompt_for_user_token(username, scope = scope, client_id = client_id, client_secret = client_secret, redirect_uri = redirect_uri)
+token = util.prompt_for_user_token(username, scope = scope, client_id = client_id, client_secret = client_secret, redirect_uri = redirect_uri)
     sp = spotipy.Spotify(auth=token)
     df = pd.DataFrame(columns = ('Title', 'Artists'))
-    T = []
-    A = []
+    TrackTitle = []
+    Artist = []
+    Album = []
     for i in Offset:
         results = sp.current_user_saved_tracks(limit = 50, offset = i)
         
         for item in results['items']:
                 track = item['track']
                 track['name'] + '/' + track['artists'][0]['name']
-                T.append(track['name'])
-                A.append(track['artists'][0]['name'])
-    df['Title'] = T
-    df['Artists'] = A
-    df.to_csv(today + 'SpotifyLikedSongs.csv') 
+                TrackTitle.append(track['name'])
+                Artist.append(track['artists'][0]['name'])
+                Album.append(track['album']['name'])
+                
+    df['Title'] = TrackTitle
+    df['Artists'] = Artist
+    df['Album'] = Album
+    
+    df.to_csv(today + 'SpotifySavedSongs.csv') 
 Liked_Songs()
 
 
