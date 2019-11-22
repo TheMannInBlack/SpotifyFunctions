@@ -4,3 +4,6 @@ a lot fo music in the past few years and even switching from downloaded music to
 made me lose songs. Currently, the only script in here downloads the title and artist of
 every song in your library and saves it in CSV format. For those proficient at coding,
 I'm sure you could find some uses for this script...
+
+
+If you have any questions about running this, reach out and I'll help you.
