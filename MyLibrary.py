@@ -7,7 +7,9 @@ import numpy as np
 from datetime import date
 
 today = str(date.today())
-
+#Only 50 songs can be donwloaded per request. The second number should be the 
+#total number of songs in your library; to play it safe,
+#round up to the nearest 50.
 Offset = np.arange(0,1000, 50).tolist()
 
 def Liked_Songs():
