@@ -7,3 +7,8 @@ I'm sure you could find some uses for this script...
 
 
 If you have any questions about running this, reach out and I'll help you.
+
+Use pip to install the rquired libraries:
+```shell
+$ pip install -r requirements.txt
+```
